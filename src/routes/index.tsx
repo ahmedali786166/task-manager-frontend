@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const API_URL = "http://localhost:5000/api/ai/plan-task";
+const API_URL = "https://api-task.bonto.run/api/ai/plan-task";
 
 type Plan = { summary: string; priority: string; estimatedHours: number; steps: string[] };
 
