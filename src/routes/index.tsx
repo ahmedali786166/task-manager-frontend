@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
-const API_URL = "https://api-task.bonto.run/api/ai/plan-task";
+const API_URL = "https://api-task.bonto.run/";
 
 type Plan = { summary: string; priority: string; estimatedHours: number; steps: string[] };
 
@@ -52,7 +52,7 @@ function Index() {
       setPlan(data.plan);
     } catch (err) {
       const msg = err instanceof TypeError
-        ? "Can't reach the planning server at localhost:5000. Make sure your backend is running and allows CORS."
+        ? "Can't reach the planning server at api-task.banto.run . Make sure your backend is running and allows CORS."
         : err instanceof Error ? err.message : "Something went wrong.";
       setError(msg);
     } finally {
