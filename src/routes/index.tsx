@@ -52,7 +52,7 @@ function Index() {
       setPlan(data.plan);
     } catch (err) {
       const msg = err instanceof TypeError
-        ? "Can't reach the planning server at api-task.banto.run . Make sure your backend is running and allows CORS."
+        ? "Can't reach the planning server at backend . Make sure your backend is running and allows CORS."
         : err instanceof Error ? err.message : "Something went wrong.";
       setError(msg);
     } finally {
